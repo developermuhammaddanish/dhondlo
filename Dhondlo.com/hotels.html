@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+          <a href="/index.html" id="logo"><img src="images/navbar/Logo.png" alt="Logo" /></a>
+        </div>
+  
+        <div class="menus">
+          <a href="/index.html" id="home" class="active" onclick="setActive('home')">
+          <img class="svgicons" src="/images/navbar/home.svg" alt="">Home</a>
+          <div class="dropdown">
+            <a href="#" id="services" onclick="setActive('services')">
+              <img class="svgicons" src="/images/navbar/services.svg" alt="">Services
+            </a>
+            <div class="dropdown-content">
+              <a href="/hostels.html" id="hostel"><img class="svgicons" src="/images/navbar/hostel.svg" alt="">Hostels</a>
+              <a href="/hotels.html" id="hotel"><img class="svgicons" src="/images/navbar/hotel.svg" alt="">Hotels</a>
+            </div>
+          </div>
+          <a href="/about.html" id="about" onclick="setActive('about')"><img class="svgicons" src="/images/navbar/about.svg" alt="">About</a>
+          <a href="/contact.html" id="contact" onclick="setActive('contact')"><img class="svgicons" src="/images/navbar/contact.svg" alt="">Contact</a>
+        </div>
+  
+        <div class="log_section">
+          <div id="signup">
+            <a href="#"><img class="svgicons" src="/images/navbar/signup.svg" alt=""></i>Signup</a>  
+          </div>
+          <div id="login">
+            <a  href="#"><img class="svgicons" src="/images/navbar/login white.svg" alt="">Login</a>
+          </div>
+        </div>
+  
+        <div class="icon" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+
+    <section class="filter">
+      <!-- filter Items -->
+
+      <div class="items">
+        <select class="item">
+          <option >City</option>
+          <option value="1">Jamshoro</option>
+          <option value="2">Hyderabad</option>
+        </select>
+        <select class="item">
+          <option >Low price</option>
+          <option value="1">Low price</option>
+          <option value="2">Medium price</option>
+          <option value="3">High price</option>
+        </select>
+      </div>
+    </section>
+    <section class="related-section">
+      <div>
+        <h2 class="heading">Related Services</h2>
+      </div>
+      <div class="card-section">
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <article class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </article>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <article class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </article>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img
+              src="./images/hotels/colonial-style-house-night-scene.jpg"
+              alt=""
+            />
+          </div>
+          <article class="card-body">
+            <h2>Bismillah</h2>
+            <div class="card-info">
+              <p href="">
+                <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+              </p>
+              <p href=""><i class="fa-solid fa-user"></i> Vancancies: 50</p>
+              <p href="">
+                <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+              </p>
+              <p href="">
+                <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+              </p>
+              <p href=""><i class="fa-solid fa-location-dot"></i> Location</p>
+            </div>
+            <a href="" class="view-btn">View More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+     <!-- footer -->
+     <section class="footer">
+      <div class="box-container">
+        <div class="box grid2">
+          <div class="footerLogo">
+            <img src="images/Logo.png" alt="" />
+          </div>
+          <div class="discription">
+            <p>
+              Dhondlo.com is a centralized online marketing platform for
+              service-oriented businesses. Where service providers showcase
+              their services, and users easily find the services they need.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>About</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Company</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Team</a>
+          <a href="#">
+            <i class="fas fa-arrow-right"></i>Mission, Vision & Values</a
+          >
+          <a href="#"> <i class="fas fa-arrow-right"></i>Social Impact</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Press & Media</a>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Home</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> About</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Contact</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Login</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Signup</a>
+        </div>
+
+        <div class="box">
+          <h3>Services</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Hostels</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Hotels</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Resturents</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact</h3>
+          <a href="#"> <i class="fas fa-phone"></i>+92-335-2996009</a>
+          <a href="#">
+            <i class="fas fa-envelope"></i>contact.dhondlo@gmail.com</a
+          >
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i>Jamshoro Sindh, Pakistan</a
+          >
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fa-brands fa-linkedin-in"></a>
+      </div>
+
+      <div class="credit">
+        Copyright © 2023 <span>Dhondlo.com</span> All Rights Reserved
+      </div>
+    </section>
+    <script>
+      function toggleMenu() {
+        var icon = document.querySelector(".icon");
+        icon.classList.toggle("active");
+
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("menu-open");
+      }
+
+      // JavaScript function to set the active class
+      function setActive(menuItem) {
+        // Remove the active class from all menu items
+        document.querySelectorAll("nav a").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Add the active class to the clicked menu item
+        document.getElementById(menuItem).classList.add("active");
+      }
+    </script>
+    <!-- end -->
+  </body>
+</html>

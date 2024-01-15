@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <!-- swiper js cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="heroSlider()">
+
+    <div id="back-to-top" onclick="scrollToTop()">
+      <img id="arrow" src="/images/arrow-up-solid.svg" alt="">
+    </div>
+    <nav>
+      <div class="logo">
+        <a href="/index.html" id="logo"><img src="images/navbar/Logo.png" alt="Logo" /></a>
+      </div>
+
+      <div class="menus">
+        <a href="/index.html" id="home" class="active" onclick="setActive('home')">
+        <img class="svgicons" src="/images/navbar/home.svg" alt="">Home</a>
+        <div class="dropdown">
+          <a href="#" id="services" onclick="setActive('services')">
+            <img class="svgicons" src="/images/navbar/services.svg" alt="">Services
+          </a>
+          <div class="dropdown-content">
+            <a href="/hostels.html" id="hostel"><img class="svgicons" src="/images/navbar/hostel.svg" alt="">Hostels</a>
+            <a href="/hotels.html" id="hotel"><img class="svgicons" src="/images/navbar/hotel.svg" alt="">Hotels</a>
+          </div>
+        </div>
+        <a href="/about.html" id="about" onclick="setActive('about')"><img class="svgicons" src="/images/navbar/about.svg" alt="">About</a>
+        <a href="/contact.html" id="contact" onclick="setActive('contact')"><img class="svgicons" src="/images/navbar/contact.svg" alt="">Contact</a>
+      </div>
+
+      <div class="log_section">
+        <div id="signup">
+          <a href="#"><img class="svgicons" src="/images/navbar/signup.svg" alt=""></i>Signup</a>  
+        </div>
+        <div id="login">
+          <a  href="#"><img class="svgicons" src="/images/navbar/login white.svg" alt="">Login</a>
+        </div>
+      </div>
+
+      <div class="icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+  <!-- Hero Section -->
+<div class="banner">
+<div class="hero-slider">
+  <img src="./images/hero/home-slide1.jpg" alt="" id="slideImg" />
+</div>
+<div class="overlay">
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <section class="main-section">
+      <div class="text-section">
+        <h1>NOW FIND YOUR SERVICES EASILY!</h1>
+      </div>
+      <div class="search-bar">
+        <select name="category">
+          <option value="category1">Hostels</option>
+          <option value="category2">Hotels</option>
+        </select>
+
+        <select name="location">
+          <option value="location1">Jamshoro</option>
+          <option value="location2">Hyderabad</option>
+        </select>
+
+        <button class="search-button">Search</button>
+      </div>
+    </section>
+
+  <!-- <div class="hero-content">
+    <section class="search">
+      <h1 class="heading">Find Your Services</h1>
+      <form action="">
+        <div class="box">
+          <select name="city" id="" class="input">
+            <option value="1">Select City</option>
+            <option value="1">jamshoro</option>
+            <option value="2">Hyderabad</option>
+          </select>
+        </div>
+
+        <div class="box">
+          <select name="category" id="" class="input">
+            <option value="1">Select Category</option>
+            <option value="1">Hostel</option>
+            <option value="2">Hotel</option>
+          </select>
+        </div>
+
+        <input type="submit" value="Search" class="btn" />
+      </form>
+    </section>
+  </div> -->
+</div>
+</div>
+<!-- end -->
+   
+
+   
+    <!-- steps section -->
+    <section class="steps">
+      <div class="row">
+        <h2 class="heading">Our Services</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="steps-card">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Search Service</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="steps-card">
+            <div class="icon-wrapper">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h3>Select Service</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="steps-card">
+            <div class="icon-wrapper">
+              <i class="fa-brands fa-get-pocket"></i>
+            </div>
+            <h3>Get Service</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Slider -->
+
+    <section class="services-container">
+      <div>
+        <h2 class="heading">Our Services</h2>
+      </div>
+      <section class="swiper-container">
+        <div class="swiper serviceSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div
+                class="service-card"
+                onclick="window.location.href"
+                ="view.html"
+              >
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-card"
+                onclick="window.location.href"
+                ="view.html"
+              >
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-card"
+                onclick="window.location.href"
+                ="view.html"
+              >
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="service-card"
+                onclick="window.location.href"
+                ="view.html"
+              >
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="service-card">
+                <div class="service-card-img">
+                  <img
+                    src="./images/hotels/colonial-style-house-night-scene.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="service-card-body">
+                  <h2>Bismillah</h2>
+                  <div class="service-card-info">
+                    <p href="">
+                      <i class="fa-solid fa-clock"></i> Last Update: 2 month ago
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-user"></i> Vancancies: 50
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-money-bill-wave"></i> Price: 10000
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-tag"></i> Discount: <span>500</span>
+                    </p>
+                    <p href="">
+                      <i class="fa-solid fa-location-dot"></i> Location
+                    </p>
+                  </div>
+                  <a href="" class="view-btn">View More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </section>
+    </section>
+
+    <!-- Post Section -->
+
+    <section class="poster">
+      <div class="poster-container"></div>
+    </section>
+
+    <!-- Services Slider -->
+
+    <section class="services-container">
+      <div>
+        <h2 class="heading">Our Partners</h2>
+      </div>
+      <section class="swiper-container">
+        <div class="swiper partnerSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="./images/brand/Bismillah Hostel.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="./images/brand/Bismillah Hostel.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="./images/brand/Bismillah Hostel.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="./images/brand/Bismillah Hostel.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="partner-img">
+                <img src="./images/brand/Bismillah Hostel.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div> -->
+        <!-- <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </section>
+    </section>
+
+    <!-- Team Slider -->
+
+    <section class="team-container">
+      <div>
+        <h2 class="heading">Our team</h2>
+      </div>
+      <section class="swiper-container">
+        <div class="swiper teamSlider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Muhammad Danish</h3>
+                <p>Backend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Mubashir</h3>
+                <p>Frontend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Faiz Ul Hassan</h3>
+                <p>Fontend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Muhammad Danish</h3>
+                <p>Backend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Mubashir</h3>
+                <p>Frontend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="team-card">
+                <div class="image">
+                  <img src="./images/team/pic-1.png" alt="Card Image" />
+                </div>
+                <h3>Faiz Ul Hassan</h3>
+                <p>Fontend Developer</p>
+                <div class="share">
+                  <a href="#" class="fab fa-facebook-f"></a>
+                  <a href="#" class="fa-solid fa-envelope"></a>
+                  <a href="#" class="fa-brands fa-whatsapp"></a>
+                  <a href="#" class="fa-brands fa-linkedin-in"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev team-btn-prev"></div>
+        <div class="swiper-button-next team-btn-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </section>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box grid2">
+          <div class="footerLogo">
+            <img src="images/Logo.png" alt="" />
+          </div>
+          <div class="discription">
+            <p>
+              Dhondlo.com is a centralized online marketing platform for
+              service-oriented businesses. Where service providers showcase
+              their services, and users easily find the services they need.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>About</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Company</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Team</a>
+          <a href="#">
+            <i class="fas fa-arrow-right"></i>Mission, Vision & Values</a
+          >
+          <a href="#"> <i class="fas fa-arrow-right"></i>Social Impact</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i>Press & Media</a>
+        </div>
+
+        <div class="box">
+          <h3>Quick Links</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Home</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> About</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Contact</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Login</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Signup</a>
+        </div>
+
+        <div class="box">
+          <h3>Services</h3>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Hostels</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Hotels</a>
+          <a href="#"> <i class="fas fa-arrow-right"></i> Resturents</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact</h3>
+          <a href="#"> <i class="fas fa-phone"></i>+92-335-2996009</a>
+          <a href="#">
+            <i class="fas fa-envelope"></i>contact.dhondlo@gmail.com</a
+          >
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i>Jamshoro Sindh, Pakistan</a
+          >
+        </div>
+      </div>
+
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fa-brands fa-linkedin-in"></a>
+      </div>
+
+      <div class="credit">
+        Copyright © 2023 <span>Dhondlo.com</span> All Rights Reserved
+      </div>
+    </section>
+
+    <!-- end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
